@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+    }
+    header {
+      padding-top: 110px;
+    }
+    div, header h1 {
+      padding-top: 4px;
+      padding-bottom: 4px;
+    }
+    header h1 {
+      font-weight: 100;
+      font-size: 84px;
+    }
+    a.button, a.button:visited {
+      background: #ccc;
+      color: #fff;
+      padding: 16px;
+      transition: 0.3s;
+      text-decoration: none;
+      border-radius: 8px;
+      border-color: transparent;
+    }
+    a.button:hover {
+      background: #bbb;
+    }
+    div.button.container {
+      padding-top: 30px;
+      background: transparent;
+    }
+  </style>
+  <body>
+    <header>
+      <div>The button has been pressed</div>
+      <h1 id="myCounter">0</h1>
+      <div>times</div>
+    </header>
+    <div class="button container">
+      <a class="button" id="myButton" href="#">Click Here</a>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script>
+    $(function(){
+      var timesButtonClicked = 0;
+      $('#myButton').on('click', function(){
+        timesButtonClicked++;
+        $('#myCounter').text(timesButtonClicked);
+      });
+    });
+    </script>
+  </body>
+</html>
